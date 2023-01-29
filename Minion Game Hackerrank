@@ -1,0 +1,20 @@
+def minion_game(string):
+    
+    stuart = 0
+    kevin = 0
+    vowel = 'AEIOU'
+    n = len(string)
+    for i in range(n):
+        letter = string[i]
+        no_of_remaining_letters = n - i
+        if letter in vowel:
+            kevin += no_of_remaining_letters
+        else:
+            stuart += no_of_remaining_letters
+        
+    if kevin == stuart:
+        print('Draw')
+    elif kevin > stuart:
+        print('Kevin', kevin)
+    else:
+        print('Stuart', stuart)
