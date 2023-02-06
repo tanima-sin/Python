@@ -1,0 +1,28 @@
+import random
+def guessing_game():
+    
+    lower_limit = int(input())
+    upper_limit = int(input())
+    
+    random.seed(20)
+    x = random.randint(lower_limit, upper_limit)
+    
+    guess = 0
+    
+    while True:
+        
+        guessed_number = int(input(f"Enter A number between {lower_limit} and {upper_limit}:"))
+        
+        guess += 1
+        
+        if guessed_number > x:
+            print("Try Again! You guessed too high")
+        
+        elif guessed_number < x:
+            print("Try Again! You guessed too low")
+            
+        else:
+            print(f"Congratulation!! You guessed the right number in {guess}th try")
+            break
+            
+guessing_game()
